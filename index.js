@@ -5,3 +5,11 @@ function testNum(num) {
     return Promise.reject(`${num} is less than 10`);
   }
 }
+
+testNum(11)
+  .then(response => console.log(response))
+  .catch(error => console.log(error));
+
+testNum(1)
+  .then(response => console.log(response))
+  .catch(error => console.log(error));
