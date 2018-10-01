@@ -32,3 +32,12 @@ function sortAllWords(words) {
     .then(words => words)
     .catch(reject => console.log('Not going to work, do better'));
 }
+
+makeAllCaps(words)
+  .then(capitalWords => sortAllWords(capitalWords))
+  .then(sortedWords => console.log(sortedWords))
+  .catch(error =>
+    cconsole.log(
+      'The array that was given contained an element that is not a string'
+    )
+  );
