@@ -24,3 +24,11 @@ function makeAllCaps(words) {
     }
   });
 }
+
+function sortAllWords(words) {
+  return new Promise(function(resolve, reject) {
+    resolve(words.sort());
+  })
+    .then(words => words)
+    .catch(reject => console.log('Not going to work, do better'));
+}
